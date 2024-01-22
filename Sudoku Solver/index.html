@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <h1 id="Title-Header">
+        Sudoku Solver
+    </h1>
+    <div class="flex-container">
+        <div id ="sudoku-grid"></div>
+    </div>
+    
+    <script src="index.js"></script>
+    <div class = "button-container">
+        <button id ="Clear-button" class="button" onclick = "clear_grid()">
+            Clear Grid
+        </button>
+        <button id ="Generate-Button" class="button" onclick = "generate_valid_sudoku()">
+            Generate Random Sudoku
+        </button>
+        <button id ="Validate-Button" class="button" onclick = "validate_sudoku()">
+            Validate Sudoku
+        </button>
+        <button id ="Solve-Button" class="button" onclick = "solve_sudokuer()">
+            Solve Sudoku
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin-top: -160px; /* Move up by 50px; adjust as needed */
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 60px); 
+    grid-template-rows: repeat(9, 60px); 
+    gap: 3px; /* Spacing between cells */
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #cccccc; /* Thinner border for cells */
+    text-align: center;
+    font-size: 50px; /* Adjust as needed */
+    line-height: 40px; /* For vertical centering, match with height */
+    text-indent: 12px;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left-width: 5px;
+    border-left-color: #000000;
+    border-right-width: 5px;
+
+}
+
+.cell:nth-child(3n) {
+    border-right-width: 5px;
+    border-right-color: #000000;
+
+}
+
+.cell:nth-last-child(n) {
+    border-bottom-width: 5px;
+    border-bottom-color: #000000;
+}
+
+
+.row:nth-child(3n + 1) .cell {
+    border-top-width: 5px;
+    border-top-color: #000000;
+}
+
+
+.row {
+    display: contents;
+}
+
+#Title-Header {
+    text-align: center
+    
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    background-image: linear-gradient(to right, #007bff, #0056b3); /* Blue gradient */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    outline: none;
+    position: relative; /* For absolute positioning of the icon */
+    overflow: hidden; /* Ensures the pseudo-element doesn't go outside the button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    align-items: flex-start; /* Align to the top */
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #8a2be2, #5a189a); /* Purple gradient on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 10px; /* Optional: adds space between buttons */
+}
+
+
